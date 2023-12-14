@@ -22,9 +22,6 @@ namespace LibraryManagementSystem.Application.Features.Book.Queries.GetSIngleBoo
             _mapper = mapper;
         }
 
-
-
-
         public async Task<BookDto> Handle(GetSingleBookQuery request, CancellationToken cancellationToken)
         {
             var currentBook = await _bookRepository.GetByIdAsync(request.Id); 
