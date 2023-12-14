@@ -1,4 +1,6 @@
-using LibraryManagementSystem.Application; 
+using LibraryManagementSystem.Application;
+using LibraryManagementSystem.Persistence;
+using LibraryManagementSystem.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,9 @@ builder.Services.AddControllers();
 
 // Others Services 
 builder.Services.AddApplicationServices();
+builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddInfraStructureServices();
+
 
 
 
