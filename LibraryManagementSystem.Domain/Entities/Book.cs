@@ -13,10 +13,7 @@ namespace LibraryManagementSystem.Domain.Entities
 
         public string Author { get; set; } = string.Empty;
 
-        public int ISBN { get; set; }
-
-        public int CopyAvailable { get; set; }
-
+        public long ISBN { get; set; }
        
     }
 }

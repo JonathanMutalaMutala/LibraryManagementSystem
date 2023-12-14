@@ -14,8 +14,7 @@ namespace LibraryManagementSystem.Application.Features.Book.Queries.GetAllBooks
 
         public string Author { get; set; } = string.Empty;
 
-        public int ISBN { get; set; }
+        public long ISBN { get; set; }
 
-        public int CopyAvailable { get; set; }
     }
 }
