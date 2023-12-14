@@ -1,15 +1,14 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagementSystem.Application.Features.Book.Queries.Dtos
+namespace LibraryManagementSystem.Application.Features.Book.Commands.CreateBook
 {
-    public class BookDto
+    public class CreateBookCommand : IRequest<int>
     {
-        public int Id { get; set; }
-
         public string Title { get; set; } = string.Empty;
 
         public string Author { get; set; } = string.Empty;
@@ -17,6 +16,5 @@ namespace LibraryManagementSystem.Application.Features.Book.Queries.Dtos
         public long ISBN { get; set; }
 
         public bool IsActive { get; set; }
-
     }
 }
