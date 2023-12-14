@@ -13,13 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfrastructureLayer", "Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{388EC05C-0945-477A-8716-5C31EC8316E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.Domain", "LibraryManagementSystem.Domain\LibraryManagementSystem.Domain.csproj", "{BAB08927-3C7A-4A99-8F05-8FAE2624DFAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSystem.Domain", "LibraryManagementSystem.Domain\LibraryManagementSystem.Domain.csproj", "{BAB08927-3C7A-4A99-8F05-8FAE2624DFAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.Application", "LibraryManagementSystem.Application\LibraryManagementSystem.Application.csproj", "{796F5B32-A08C-4619-8342-B62D262E0F35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSystem.Application", "LibraryManagementSystem.Application\LibraryManagementSystem.Application.csproj", "{796F5B32-A08C-4619-8342-B62D262E0F35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DE27571C-4C3F-4564-B889-E6151522EE58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.AppLayer.UnitTests", "LibraryManagementSystem.AppLayer.UnitTests\LibraryManagementSystem.AppLayer.UnitTests.csproj", "{50915368-A4B2-408B-BC28-031FEE5EDD3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSystem.AppLayer.UnitTests", "LibraryManagementSystem.AppLayer.UnitTests\LibraryManagementSystem.AppLayer.UnitTests.csproj", "{50915368-A4B2-408B-BC28-031FEE5EDD3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.API", "LibraryManagementSystem.API\LibraryManagementSystem.API.csproj", "{70953A89-604D-4BB6-9827-B2B52B7C111D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{50915368-A4B2-408B-BC28-031FEE5EDD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50915368-A4B2-408B-BC28-031FEE5EDD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50915368-A4B2-408B-BC28-031FEE5EDD3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70953A89-604D-4BB6-9827-B2B52B7C111D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70953A89-604D-4BB6-9827-B2B52B7C111D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70953A89-604D-4BB6-9827-B2B52B7C111D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70953A89-604D-4BB6-9827-B2B52B7C111D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{BAB08927-3C7A-4A99-8F05-8FAE2624DFAC} = {A9A37FBC-C30B-43C4-B7B0-F7C8740154B3}
 		{796F5B32-A08C-4619-8342-B62D262E0F35} = {EBBDB01A-2009-4CF3-86F5-D03C0D65982F}
 		{50915368-A4B2-408B-BC28-031FEE5EDD3E} = {DE27571C-4C3F-4564-B889-E6151522EE58}
+		{70953A89-604D-4BB6-9827-B2B52B7C111D} = {EBBDB01A-2009-4CF3-86F5-D03C0D65982F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA3DFA4E-B56C-4203-A98C-9E373ED4857B}
