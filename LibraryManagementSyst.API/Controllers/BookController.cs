@@ -15,9 +15,9 @@ namespace LibraryManagementSystem.API.Controllers
 
         private readonly IMediator _mediator;  
 
-        public BookController(IMediator mediator)
+        public BookController(IMediator mediator) 
         {
-            _mediator = mediator;
+            _mediator = mediator; 
         }
 
 
@@ -27,12 +27,12 @@ namespace LibraryManagementSystem.API.Controllers
         [HttpGet]
         public async Task<List<BookDto>> GetAllBooks()
         {
-            var bookLst = _mediator.Send(new GetAllBooksQuery());
+            var bookLst = await _mediator.Send(new GetAllBooksQuery());
 
-            return bookLst.Result; 
+            return bookLst; 
         }
 
-        // GET api/<BookController>/5
+        // GET api/<BookController  5
         [HttpGet("{id}")]
         public string Get(int id)
         {
