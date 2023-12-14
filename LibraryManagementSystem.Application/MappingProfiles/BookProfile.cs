@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LibraryManagementSystem.Application.Features.Book.Commands.CreateBook;
 using LibraryManagementSystem.Application.Features.Book.Queries.Dtos;
 using LibraryManagementSystem.Domain.Entities;
 using System;
@@ -14,6 +15,7 @@ namespace LibraryManagementSystem.Application.MappingProfiles
         public BookProfile()
         {
             CreateMap<BookDto,Book>().ReverseMap();
+            CreateMap<CreateBookCommand, Book>();
         }
         
     }
