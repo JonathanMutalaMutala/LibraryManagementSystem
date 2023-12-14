@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LibraryManagementSystem.Application.Contracts.Persistence;
+using LibraryManagementSystem.Application.Features.Book.Queries.Dtos;
 using MediatR;
 using System;
 using System.Collections.Generic;

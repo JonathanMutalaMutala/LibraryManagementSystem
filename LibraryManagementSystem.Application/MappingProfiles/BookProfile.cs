@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using LibraryManagementSystem.Application.Features.Book.Queries.GetAllBooks;
+using LibraryManagementSystem.Application.Features.Book.Queries.Dtos;
 using LibraryManagementSystem.Domain.Entities;
 using System;
 using System.Collections.Generic;
