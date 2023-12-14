@@ -26,9 +26,15 @@ namespace LibraryManagementSystem.Persistence.Repositories
            await _context.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+             var currentValue =  await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+
+            currentValue.IsActive = false;
+
+            _context.Update(currentValue);
+            await _context.SaveChangesAsync();
+
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync()
@@ -41,9 +47,10 @@ namespace LibraryManagementSystem.Persistence.Repositories
             return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(b => b.Id == id && b.IsActive);
         }
 
-        public Task UpdateAsync(T entity)
+        public async Task UpdateAsync(T entity)
         {
-            throw new NotImplementedException();
+            _context.Update(entity);
+            await _context.SaveChangesAsync();
         }
     }
 }
