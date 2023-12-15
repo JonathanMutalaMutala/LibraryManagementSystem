@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LibraryManagementSystem.Application.Features.Book.Commands.CreateBook;
 using LibraryManagementSystem.Application.Features.Book.Queries.Dtos;
 using LibraryManagementSystem.Application.Features.Book.Queries.GetAllBooks;
 using LibraryManagementSystem.Application.Features.Book.Queries.GetSIngleBook;
@@ -45,8 +46,13 @@ namespace LibraryManagementSystem.API.Controllers
 
         // POST api/<BookController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        public async Task<ActionResult> CreateBook(CreateBookCommand createBookCommand)
         {
+            var response = await _mediator.Send(createBookCommand);
+
+            return Ok(response);
         }
 
         // PUT api/<BookController>/5
