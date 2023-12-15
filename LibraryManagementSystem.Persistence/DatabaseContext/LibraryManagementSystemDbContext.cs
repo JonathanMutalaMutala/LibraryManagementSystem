@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LibraryManagementSystem.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace LibraryManagementSystem.Persistence.DatabaseContext
         {
             this.options = options;
         }
-
+        public DbSet<Book> Books { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             
