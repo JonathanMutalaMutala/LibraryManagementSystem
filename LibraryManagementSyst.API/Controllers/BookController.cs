@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using LibraryManagementSystem.Application.Features.Book.Queries.Dtos;
 using LibraryManagementSystem.Application.Features.Book.Queries.GetAllBooks;
+using LibraryManagementSystem.Application.Features.Book.Queries.GetSIngleBook;
+using LibraryManagementSystem.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,18 +27,20 @@ namespace LibraryManagementSystem.API.Controllers
 
         // GET: api/<BookController>
         [HttpGet]
-        public async Task<List<BookDto>> GetAllBooks()
+        public async Task<ActionResult<List<BookDto>>> GetAllBooks()
         {
             var bookLst = await _mediator.Send(new GetAllBooksQuery());
 
-            return bookLst; 
+            return Ok(bookLst); 
         }
 
         // GET api/<BookController  5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<ActionResult<Book>> GetSingleBook(int id)
         {
-            return "value";
+            var currentBook = await _mediator.Send(new GetSingleBookQuery { Id = id });
+
+            return Ok(currentBook);
         }
 
         // POST api/<BookController>
