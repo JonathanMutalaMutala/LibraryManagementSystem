@@ -1,8 +1,8 @@
 using Library.BlazorUI.Components;
 using Library.BlazorUI.Configuration;
 using Library.BlazorUI.Contracts.Book;
-using Library.BlazorUI.Services;
 using Library.BlazorUI.Services.Base;
+using Library.BlazorUI.Services.BookServices;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

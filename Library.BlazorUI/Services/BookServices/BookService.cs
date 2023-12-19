@@ -3,7 +3,7 @@ using Library.BlazorUI.Contracts.Book;
 using Library.BlazorUI.Models.BookModel;
 using Library.BlazorUI.Services.Base;
 
-namespace Library.BlazorUI.Services
+namespace Library.BlazorUI.Services.BookServices
 {
     public class BookService : BaseHttpService, IBookService
     {
@@ -15,9 +15,9 @@ namespace Library.BlazorUI.Services
         {
             var getAllBooks = await _client.BookAllAsync();
 
-            var mapper = _mapper.Map<List<BookVM>>(getAllBooks);
+            var mappedBooks = _mapper.Map<List<BookVM>>(getAllBooks);
 
-            return mapper; 
+            return mappedBooks;
         }
 
         public async Task<Response<List<BookVM>>> GetAllBooksResponse()
