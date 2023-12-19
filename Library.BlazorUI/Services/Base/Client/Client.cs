@@ -1,7 +1,7 @@
 ﻿
 namespace Library.BlazorUI.Services.Base.Client
 {
-    public class ClientService : IClientService
+    public partial class Client : IClient
     {
         public HttpClient HttpClient
         {

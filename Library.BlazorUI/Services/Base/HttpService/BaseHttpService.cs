@@ -7,11 +7,11 @@ namespace Library.BlazorUI.Services.Base.HttpService
 {
     public class BaseHttpService
     {
-        protected IClientService _clientService;
+        protected Client.IClient _clientService;
         protected readonly IMapper _mapper; 
 
 
-        public BaseHttpService(IClientService clientService, IMapper mapper)
+        public BaseHttpService(Client.IClient clientService, IMapper mapper)
         {
             _clientService = clientService;
             _mapper = mapper;
