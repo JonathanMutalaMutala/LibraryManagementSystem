@@ -1,10 +1,18 @@
 using Library.BlazorUI.Components;
+using MyNamespace;
+using Library.BlazorUI.Services.Base.Client; 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+
+//builder.Services.AddHttpClient<IClientService, ClientService>(client =>  client.BaseAddress = new Uri(builder.Configuration.GetSection("Client")["Url"].ToString()));
+builder.Services.AddHttpClient<IClientService, ClientService>(client => client.BaseAddress = new Uri("http://localhost:5019"));
+
+
 
 var app = builder.Build();
 
