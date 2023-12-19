@@ -1,6 +1,7 @@
 using Library.BlazorUI.Components;
 using Library.BlazorUI.Configuration;
 using MyNamespace;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,10 @@ builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = n
 
 // Ajout des services des pour les contrats 
 builder.Services.AddContractsServices();
+
+
+//Add AutoMapper Service
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 
