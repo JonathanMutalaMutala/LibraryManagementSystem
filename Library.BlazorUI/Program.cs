@@ -1,4 +1,5 @@
 using Library.BlazorUI.Components;
+using Library.BlazorUI.Configuration;
 using MyNamespace;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddRazorComponents()
 builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = new Uri("http://localhost:5019"));
 
 
+// Ajout des services des pour les contrats 
+builder.Services.AddContractsServices();
 
 var app = builder.Build();
 
