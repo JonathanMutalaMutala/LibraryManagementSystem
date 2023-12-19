@@ -1,5 +1,5 @@
 ﻿
-namespace Library.BlazorUI.Services.Base.Client
+namespace Library.BlazorUI.Services.Base.ClientService
 {
     public partial class Client : IClient
     {
@@ -7,9 +7,8 @@ namespace Library.BlazorUI.Services.Base.Client
         {
             get
             {
-                return HttpClient; 
+                return  new HttpClient() ?? _httpclient ;
             }
         }
     }
-
 }

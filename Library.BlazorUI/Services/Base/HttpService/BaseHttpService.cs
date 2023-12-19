@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Library.BlazorUI.Services.Base.Client;
 using MyNamespace;
 using System.Net;
 
@@ -7,11 +6,11 @@ namespace Library.BlazorUI.Services.Base.HttpService
 {
     public class BaseHttpService
     {
-        protected Client.IClient _clientService;
+        protected IClient _clientService;
         protected readonly IMapper _mapper; 
 
 
-        public BaseHttpService(Client.IClient clientService, IMapper mapper)
+        public BaseHttpService(IClient clientService, IMapper mapper)
         {
             _clientService = clientService;
             _mapper = mapper;
