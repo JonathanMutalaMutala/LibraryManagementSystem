@@ -8,11 +8,10 @@ namespace Library.BlazorUI.Services.Base
         protected IClient _client;
         protected readonly IMapper _mapper;
 
-
-        public BaseHttpService(IMapper mapper, IClient client)
+        public BaseHttpService(IClient client, IMapper mapper)
         {
-            _mapper = mapper;
             _client = client;
+            _mapper = mapper;
         }
 
 

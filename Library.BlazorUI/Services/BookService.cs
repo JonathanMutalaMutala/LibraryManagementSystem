@@ -7,7 +7,7 @@ namespace Library.BlazorUI.Services
 {
     public class BookService : BaseHttpService, IBookService
     {
-        public BookService(IMapper mapper, IClient client) : base(mapper, client)
+        public BookService(IClient client, IMapper mapper) : base(client, mapper)
         {
         }
 
