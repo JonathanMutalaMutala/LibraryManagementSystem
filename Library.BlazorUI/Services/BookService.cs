@@ -7,14 +7,27 @@ namespace Library.BlazorUI.Services
 {
     public class BookService : BaseHttpService, IBookService
     {
-        public Task<List<BookVM>> GetAllBooks()
+        public BookService(IMapper mapper, IClient client) : base(mapper, client)
         {
-            throw new NotImplementedException();
         }
 
-        public Task<Response<Guid>> GetAllBooksResponse()
+        public async Task<List<BookVM>> GetAllBooks()
         {
-            throw new NotImplementedException();
+            var getAllBooks = await _client.BookAllAsync();
+
+            var mapper = _mapper.Map<List<BookVM>>(getAllBooks);
+
+            return mapper; 
+        }
+
+        public async Task<Response<List<BookVM>>> GetAllBooksResponse()
+        {
+            var _getAllBooks = await _client.BookAllAsync();
+
+            var response = new Response<List<BookVM>>();
+
+            return response;
+
         }
     }
 }

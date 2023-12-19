@@ -7,6 +7,6 @@ namespace Library.BlazorUI.Contracts.Book
     {
         Task<List<BookVM>> GetAllBooks(); 
         
-        Task<Response<Guid>> GetAllBooksResponse();
+        Task<Response<List<BookVM>>> GetAllBooksResponse();
     }
 }

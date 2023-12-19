@@ -1,0 +1,22 @@
+﻿@page "/books/index"
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Book Title
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in BookVMs)
+        {
+            <tr>
+                <td>
+                    @item.Title
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
