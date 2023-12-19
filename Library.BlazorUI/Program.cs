@@ -1,6 +1,6 @@
 using Library.BlazorUI.Components;
 using Library.BlazorUI.Configuration;
-using MyNamespace;
+using Library.BlazorUI.Services.Base;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

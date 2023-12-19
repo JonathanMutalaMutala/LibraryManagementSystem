@@ -1,19 +1,18 @@
 ﻿using AutoMapper;
-using MyNamespace;
 using System.Net;
 
-namespace Library.BlazorUI.Services.Base.HttpService
+namespace Library.BlazorUI.Services.Base
 {
     public class BaseHttpService
     {
-        protected IClient _clientService;
-        protected readonly IMapper _mapper; 
+        protected IClient _client;
+        protected readonly IMapper _mapper;
 
 
-        public BaseHttpService(IClient clientService, IMapper mapper)
+        public BaseHttpService(IMapper mapper, IClient client)
         {
-            _clientService = clientService;
             _mapper = mapper;
+            _client = client;
         }
 
 
@@ -26,27 +25,28 @@ namespace Library.BlazorUI.Services.Base.HttpService
         /// <returns></returns>
         protected Response<Guid> ConvertApiException<Guid>(ApiException exception)
         {
-            Response<Guid> response = new Response<Guid>(); 
+            Response<Guid> response = new Response<Guid>();
 
             //Si nous recevons une BadRequest cela veut dire que les data envoyé à API sont incorrectes 
-            if(exception.StatusCode == (int)HttpStatusCode.BadRequest)
+            if (exception.StatusCode == (int)HttpStatusCode.BadRequest)
             {
                 response = new Response<Guid>
                 {
                     Message = "Invalid Data était soumis",
                     ValidationsErrors = exception.Response,
                     Success = false
-                }; 
+                };
             }
-            else if(exception.StatusCode == (int)HttpStatusCode.NotFound)
+            else if (exception.StatusCode == (int)HttpStatusCode.NotFound)
             {
                 response = new Response<Guid>
                 {
                     Message = "Aucune donné trouvé",
                     Success = false,
                     ValidationsErrors = exception.Response
-                }; 
-            }else
+                };
+            }
+            else
             {
                 response = new Response<Guid>
                 {
@@ -56,6 +56,6 @@ namespace Library.BlazorUI.Services.Base.HttpService
             }
             return response;
         }
-        
+
     }
 }
