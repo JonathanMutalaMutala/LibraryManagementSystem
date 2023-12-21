@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagementSystem.Application.Models
+namespace LibraryManagementSystem.Application.Models.Login
 {
     /// <summary>
     /// Lors de L'authentification 

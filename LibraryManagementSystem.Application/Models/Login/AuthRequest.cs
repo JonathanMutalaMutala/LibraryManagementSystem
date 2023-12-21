@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagementSystem.Application.Models
+namespace LibraryManagementSystem.Application.Models.Login
 {
     /// <summary>
     /// Cette classe correspond aux informations que les users pourront entrée pour le Login 
