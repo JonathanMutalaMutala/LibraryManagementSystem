@@ -58,7 +58,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "",
+      "namespace": "Library.BlazorUI.Services.Base",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -90,8 +90,10 @@
       "generateOptionalPropertiesAsNullable": false,
       "generateNullableReferenceTypes": false,
       "templateDirectory": null,
-      "serviceHost": null,
-      "serviceSchemes": null,
+      "serviceHost": "localhost:7117",
+      "serviceSchemes": [
+        "https"
+      ],
       "output": "ClientService.cs",
       "newLineBehavior": "Auto"
     }
