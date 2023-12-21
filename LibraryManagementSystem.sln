@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSyst.API",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.BlazorUI", "Library.BlazorUI\Library.BlazorUI.csproj", "{73E97240-F597-4466-8D84-369D600E0B6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.Identity", "LibraryManagementSystem.Identity\LibraryManagementSystem.Identity.csproj", "{220DB339-B3C8-442E-906F-55BC42896072}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{73E97240-F597-4466-8D84-369D600E0B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73E97240-F597-4466-8D84-369D600E0B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73E97240-F597-4466-8D84-369D600E0B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{220DB339-B3C8-442E-906F-55BC42896072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{220DB339-B3C8-442E-906F-55BC42896072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{220DB339-B3C8-442E-906F-55BC42896072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{220DB339-B3C8-442E-906F-55BC42896072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{828E9E32-90FD-4444-8D8B-F31F71195585} = {AA70CA57-B4B4-4BF4-9A3B-1AFB9AB40453}
 		{2EFDB9BE-F368-418F-A2EC-EE702C2F26BD} = {EBBDB01A-2009-4CF3-86F5-D03C0D65982F}
 		{73E97240-F597-4466-8D84-369D600E0B6D} = {388EC05C-0945-477A-8716-5C31EC8316E1}
+		{220DB339-B3C8-442E-906F-55BC42896072} = {AA70CA57-B4B4-4BF4-9A3B-1AFB9AB40453}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA3DFA4E-B56C-4203-A98C-9E373ED4857B}
