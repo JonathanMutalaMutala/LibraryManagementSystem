@@ -26,7 +26,9 @@ namespace LibraryManagementSystem.Identity.Configurations
                 UserName = "Admin",
                 NormalizedUserName = "ADMIN",
                 PasswordHash = hasher.HashPassword(null, "P@ssword1"), //HasherAPassWord(),
-                EmailConfirmed = true
+                EmailConfirmed = true,
+                OrgId = 1,
+                IsActive = true
             },
             new ApplicationUser
             {
@@ -38,7 +40,9 @@ namespace LibraryManagementSystem.Identity.Configurations
                 UserName = "SysUser",
                 NormalizedUserName = "SYSUSER",
                 PasswordHash = hasher.HashPassword(null, "P@ssword1"),
-                EmailConfirmed = true
+                EmailConfirmed = true,
+                OrgId = 1,
+                IsActive = true
             },
             new ApplicationUser
             {
@@ -50,7 +54,9 @@ namespace LibraryManagementSystem.Identity.Configurations
                 UserName = "SysClient",
                 NormalizedUserName = "SYSCLIENT",
                 PasswordHash = hasher.HashPassword(null, "P@ssword1"),
-                EmailConfirmed = true
+                EmailConfirmed = true,
+                OrgId = 1,
+                IsActive = true
             }
 
         };
