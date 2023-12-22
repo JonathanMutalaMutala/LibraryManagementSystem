@@ -2,6 +2,7 @@ using LibraryManagementSystem.Application;
 using LibraryManagementSystem.Persistence;
 using LibraryManagementSystem.Infrastructure;
 using LibraryManagementSyst.API.Middleware;
+using LibraryManagementSystem.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddInfraStructureServices();
-
+builder.Services.AddIdentityServices(builder.Configuration);
 
 //Permettre à L'API de recevoir d'autre requetes 
 builder.Services.AddCors(options =>
