@@ -74,7 +74,6 @@ namespace LibraryManagementSystem.Identity.Service
         }
         #endregion
 
-
         #region Register Methode 
         /// <summary>
         /// Methode permettant d'enregistrer 
