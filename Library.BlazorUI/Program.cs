@@ -20,8 +20,8 @@ builder.Services.AddHttpClient<IClient, Client>
 
 
 // Ajout des services des pour les contrats 
-//builder.Services.AddContractsServices();
-builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddContractsServices();
+//builder.Services.AddScoped<IBookService, BookService>();
 
 //Add AutoMapper Service
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
