@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSyst.API",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.BlazorUI", "Library.BlazorUI\Library.BlazorUI.csproj", "{73E97240-F597-4466-8D84-369D600E0B6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementSystem.Identity", "LibraryManagementSystem.Identity\LibraryManagementSystem.Identity.csproj", "{220DB339-B3C8-442E-906F-55BC42896072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSystem.Identity", "LibraryManagementSystem.Identity\LibraryManagementSystem.Identity.csproj", "{220DB339-B3C8-442E-906F-55BC42896072}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
