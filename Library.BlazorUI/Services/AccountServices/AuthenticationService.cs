@@ -44,9 +44,9 @@ namespace Library.BlazorUI.Services.AccountServices
 
         }
 
-        public Task Logout()
+        public async Task Logout()
         {
-            throw new NotImplementedException();
+            await ((ApiAuthenticationStateProvider)_authenticationStateProvider).LoggedOut();
         }
     }
 }

@@ -66,6 +66,16 @@ namespace Library.BlazorUI.Providers
 
         }
 
+        public async Task LoggedOut()
+        {
+            await _localStorageService.RemoveItemAsync("token");
+
+            var nobody = new ClaimsPrincipal(new ClaimsIdentity()); 
+            var authState = Task.FromResult(new AuthenticationState(nobody));
+
+            NotifyAuthenticationStateChanged(authState);
+        }
+
 
         /// <summary>
         /// Methode permettant de Recuperer les claims du Token 
