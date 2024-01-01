@@ -14,6 +14,10 @@ namespace Library.BlazorUI.Components.Pages.Account
         [Inject]
         private IAuthenticationService AuthenticationService { get; set; }
 
+        [Inject]
+        private NavigationManager NavigationManager { get; set; }
+
+
         protected override void OnInitialized()
         {
             Model = new LoginVM();
@@ -25,7 +29,7 @@ namespace Library.BlazorUI.Components.Pages.Account
 
             if (isAuthenticate)
             {
-                // Acceder à une autre page 
+                NavigationManager.NavigateTo("/books/index");
             }
 
             Message = "UserName/Password ne correspond pas";
