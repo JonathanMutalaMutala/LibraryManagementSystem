@@ -6,23 +6,37 @@
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="books/index">Books</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">Profil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">Reservation</a>
-                </li>
+
+                <Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+                    <Authorized>
+                        <li class="nav-item">
+                            <a class="nav-link" href="books/index">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">@context.User?.Identity?.Name</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Reservation</a>
+                        </li>
+                    </Authorized>
+                </Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+                <Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+                    <NotAuthorized>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Register</a>
+                        </li>
+                    </NotAuthorized>
+                </Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Search">
-                <button class="btn btn-primary" type="button">Search</button>
-            </form>
+            <Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+                <Authorized>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </Authorized>
+            </Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+           
         </div>
     </div>
 </nav>
