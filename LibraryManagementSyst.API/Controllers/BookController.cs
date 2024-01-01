@@ -5,6 +5,7 @@ using LibraryManagementSystem.Application.Features.Book.Queries.GetAllBooks;
 using LibraryManagementSystem.Application.Features.Book.Queries.GetSIngleBook;
 using LibraryManagementSystem.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,6 +14,7 @@ namespace LibraryManagementSystem.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BookController : ControllerBase
     {
 
@@ -22,10 +24,6 @@ namespace LibraryManagementSystem.API.Controllers
         {
             _mediator = mediator; 
         }
-
-
-
-
         // GET: api/<BookController>
         [HttpGet]
         public async Task<ActionResult<List<BookDto>>> GetAllBooks()
