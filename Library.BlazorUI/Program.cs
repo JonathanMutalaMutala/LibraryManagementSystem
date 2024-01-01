@@ -21,6 +21,7 @@ builder.Services.AddHttpClient<IClient, Client>
     (Client => Client.BaseAddress = new Uri("https://localhost:7117"));
 
 
+builder.Services.AddAuthorizationCore();
 
 builder.Services.AddBlazoredToast();
 builder.Services.AddBlazoredLocalStorage();
