@@ -3,6 +3,7 @@ using Blazored.Toast;
 using Library.BlazorUI.Components;
 using Library.BlazorUI.Configuration;
 using Library.BlazorUI.Contracts.Book;
+using Library.BlazorUI.Handlers;
 using Library.BlazorUI.Providers;
 using Library.BlazorUI.Services.Base;
 using Library.BlazorUI.Services.BookServices;
@@ -15,10 +16,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+builder.Services.AddTransient<JwtAuthorizationMessageHandler>();
+
 
 //builder.Services.AddHttpClient<IClientService, ClientService>(client =>  client.BaseAddress = new Uri(builder.Configuration.GetSection("Client")["Url"].ToString()));
 builder.Services.AddHttpClient<IClient, Client>
-    (Client => Client.BaseAddress = new Uri("https://localhost:7117"));
+    (Client => Client.BaseAddress = new Uri("https://localhost:7117"))
+    .AddHttpMessageHandler<JwtAuthorizationMessageHandler>();
 
 
 builder.Services.AddAuthorizationCore();
