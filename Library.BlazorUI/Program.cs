@@ -1,8 +1,12 @@
+using Blazored.LocalStorage;
+using Blazored.Toast;
 using Library.BlazorUI.Components;
 using Library.BlazorUI.Configuration;
 using Library.BlazorUI.Contracts.Book;
+using Library.BlazorUI.Providers;
 using Library.BlazorUI.Services.Base;
 using Library.BlazorUI.Services.BookServices;
+using Microsoft.AspNetCore.Components.Authorization;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +22,9 @@ builder.Services.AddHttpClient<IClient, Client>
 
 
 
+builder.Services.AddBlazoredToast();
+builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddScoped<AuthenticationStateProvider, ApiAuthenticationStateProvider>();
 
 // Ajout des services des pour les contrats 
 builder.Services.AddContractsServices();
