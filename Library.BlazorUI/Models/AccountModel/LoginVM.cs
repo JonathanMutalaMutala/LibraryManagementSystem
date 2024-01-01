@@ -9,5 +9,7 @@ namespace Library.BlazorUI.Models.AccountModel
 
         [Required]
         public string Password { get; set; } = string.Empty;
+
+        public bool RememberMe { get; set; } 
     }
 }

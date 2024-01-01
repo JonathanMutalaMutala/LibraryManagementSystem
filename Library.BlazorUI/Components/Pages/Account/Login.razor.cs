@@ -4,8 +4,9 @@ using Microsoft.AspNetCore.Components;
 
 namespace Library.BlazorUI.Components.Pages.Account
 {
-    public partial class Login
+    public partial class Login : ComponentBase
     {
+        [SupplyParameterFromForm]
         public LoginVM Model { get; set; }
 
         public string Message { get; set; }

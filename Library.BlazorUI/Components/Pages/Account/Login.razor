@@ -1,38 +1,43 @@
 ﻿@page "/login"
-
+@rendermode InteractiveServer
 
 <div>
     <div class="row">
         <div class="" style="display:flex; justify-content:center;align-items:center;text-align:center;">
             <div class="col-md-4">
                 <EditForm Model="Model" OnValidSubmit="HandleLogin">
+                    <DataAnnotationsValidator />
+                    @*                     <ValidationSummary />
+                    *@
                     <section>
                         <h1>Se connecter</h1>
                         <hr />
                         <div class="form-floating mb-2">
-                            <InputText class="form-control" autocomplete="email" aria-required="true" @bind-Value="@Model.Email" ></InputText>
+                            <InputText class="form-control" autocomplete="email" aria-required="true" @bind-Value="@Model.Email"></InputText>
                             <label class="form-label">Email</label>
                             <ValidationMessage For="@(() => Model.Email)" />
                         </div>
                         <div class="form-floating mb-2">
                             <InputText class="form-control" autocomplete="current-password" aria-required="true" @bind-Value="@Model.Password"></InputText>
                             <label class="form-label">Password</label>
-                            <ValidationMessage For="@(() => Model.Password)"/>
+                            <ValidationMessage For="@(() => Model.Password)" />
                         </div>
                         <div>
                             <div class="checkbox">
                                 <label class="form-label">
-                                    <input class="form-check-input" />
+                                    <input class="form-check-input" @bind-value="Model.RememberMe" />
                                     Remember me
                                 </label>
                             </div>
                         </div>
                         <div>
-                            <button class="w-100 btn btn-lg btn-primary">Se connecter</button>
+                            <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
                         </div>
                     </section>
+
+
                 </EditForm>
-               
+
             </div>
         </div>
     </div>
