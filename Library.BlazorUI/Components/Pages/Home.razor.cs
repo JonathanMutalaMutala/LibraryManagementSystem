@@ -18,9 +18,9 @@ namespace Library.BlazorUI.Components.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            var x = await ((ApiAuthenticationStateProvider)AuthenticationStateProvider).GetAuthenticationStateAsync();
+            AuthenticationState authenticationState = await ((ApiAuthenticationStateProvider)AuthenticationStateProvider).GetAuthenticationStateAsync();
 
-            if(x.User?.Identity?.IsAuthenticated == false)
+            if(authenticationState.User?.Identity?.IsAuthenticated == false)
             {
                 NavigationManager.NavigateTo("/login");
             }
